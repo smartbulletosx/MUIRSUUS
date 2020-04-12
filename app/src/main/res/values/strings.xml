@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MUIRSUUS</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Главная</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_lit">Литература</string>
+    <string name="title_portfel">Твой портфель</string>
+    <string name="title_net">Сеть</string>
+    <string name="title_settings">Настройки</string>
+    <string name="inf_btn">ИНФОРМАЦИОННЫЙ БЛОК</string>
+    <string name="calc_btn">РАССЧЁТНЫЙ БЛОК</string>
+    <string name="manage_btn">БЛОК УПРАВЛЕНИЯ</string>
 </resources>
