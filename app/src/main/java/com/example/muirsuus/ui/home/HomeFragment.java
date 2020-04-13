@@ -6,19 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.muirsuus.CardClass;
+import com.example.muirsuus.InformationActivity;
 import com.example.muirsuus.R;
-import com.example.muirsuus.StartAdapter;
+import com.example.muirsuus.adapters.StartAdapter;
 import com.example.muirsuus.WebActivity;
 
 import java.util.ArrayList;
@@ -35,8 +32,10 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home,mRecyclerView , false);
-        SCHEMES.add(new CardClass(R.drawable.ic_means,"Средства связи"));
-        SCHEMES.add(new CardClass(R.drawable.ic_doc,"Документы ОТС"));
+        SCHEMES.add(new CardClass(R.drawable.ic_1,"Средства связи"));
+        SCHEMES.add(new CardClass(R.drawable.ic_2,"Аппаратные"));
+        SCHEMES.add(new CardClass(R.drawable.ic_3,"Документы ОТС"));
+        SCHEMES.add(new CardClass(R.drawable.ic_4,"История"));
 
         mRecyclerView = (RecyclerView)root.findViewById(R.id.news_list);
         mRecyclerView.setHasFixedSize(true);
@@ -60,6 +59,16 @@ public class HomeFragment extends Fragment {
         };
 
         manage_btn.setOnClickListener(onMBtn);
+
+        inf_btn = (Button)root.findViewById(R.id.inf_btn);
+        View.OnClickListener onInfBtn = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), InformationActivity.class);
+                startActivity(intent);
+            }
+        };
+        inf_btn.setOnClickListener(onInfBtn);
         return root;
     }
 }
