@@ -14,10 +14,17 @@ import java.util.List;
 
 public class InformationActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private InformAdapter adapter;
-    final public List<CardClass> SCHEMES = new ArrayList<CardClass>();
+    private String[] titles = {
+            "ТТХ средств связи",
+            "ТТХ вооружения",
+            "ТТХ автомобильной и бронетехники",
+            "ТТХ средств РХБЗ",
+            "ТТХ инженерных средств",
+            "Оперативно-техническая служба",
+            "Сетевой инженер",
+            "Подготовка",
+            "Нормативно-правовая база",
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.muirsuus.CardClass;
 import com.example.muirsuus.InformationActivity;
 import com.example.muirsuus.R;
+import com.example.muirsuus.TTH;
 import com.example.muirsuus.adapters.StartAdapter;
 import com.example.muirsuus.WebActivity;
 
@@ -31,7 +32,7 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_home,mRecyclerView , false);
+        View root = inflater.inflate(R.layout.fragment_home, mRecyclerView , false);
         SCHEMES.add(new CardClass(R.drawable.ic_1,"Средства связи"));
         SCHEMES.add(new CardClass(R.drawable.ic_2,"Аппаратные"));
         SCHEMES.add(new CardClass(R.drawable.ic_3,"Документы ОТС"));
@@ -64,7 +65,7 @@ public class HomeFragment extends Fragment {
         View.OnClickListener onInfBtn = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), InformationActivity.class);
+                Intent intent = new Intent(getContext(), TTH.class);
                 startActivity(intent);
             }
         };
