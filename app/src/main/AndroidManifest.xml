@@ -12,8 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TTH"></activity>
-        <activity android:name=".InformationActivity" />
+        <activity android:name=".adapters.Puncts"></activity>
+        <activity android:name=".TTHActivity" />
+        <activity android:name=".MeansOfCommunication" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">

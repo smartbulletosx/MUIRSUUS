@@ -13,9 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.muirsuus.CardClass;
-import com.example.muirsuus.InformationActivity;
 import com.example.muirsuus.R;
-import com.example.muirsuus.TTH;
+import com.example.muirsuus.TTHActivity;
 import com.example.muirsuus.adapters.StartAdapter;
 import com.example.muirsuus.WebActivity;
 
@@ -65,7 +64,7 @@ public class HomeFragment extends Fragment {
         View.OnClickListener onInfBtn = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), TTH.class);
+                Intent intent = new Intent(getContext(), TTHActivity.class);
                 startActivity(intent);
             }
         };
